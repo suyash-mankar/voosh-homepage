@@ -1,0 +1,23 @@
+.navbar_container {
+  align-items: center;
+  background-color: #fff;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 30px;
+  position: absolute;
+  z-index: 1;
+
+  .voosh_logo {
+    height: 8vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar_container {
+    .voosh_logo {
+      height: 4vw;
+    }
+  }
+}

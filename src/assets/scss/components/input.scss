@@ -1,0 +1,25 @@
+.input_container {
+  display: flex;
+  flex-direction: column;
+  width: 430px;
+
+  .input_label {
+    color: #000;
+    font-size: 14px;
+
+    .compulsory_icon {
+      color: #ee3832;
+    }
+  }
+
+  .input_style {
+    background-color: #eff0f3;
+    border: none;
+    border-radius: 4px;
+    color: #000;
+    font-size: 14px;
+    height: 40px;
+    margin: 5px 0 15px;
+    padding: 0 10px;
+  }
+}

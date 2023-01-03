@@ -1,0 +1,90 @@
+.page8_container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+  justify-content: space-evenly;
+  padding: 20px 10px;
+
+  .page8_container_text {
+    width: 50vw;
+
+    .title {
+      color: #fff;
+      font-size: 3vw;
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
+
+  .page8_text_container {
+    .card_container {
+      align-items: center;
+      background-color: #fff;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+      width: 70vw;
+
+      .email_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70vw;
+
+        .button_container_style {
+          align-items: center;
+          background-color: #2d66f5;
+          border-radius: 4px;
+          cursor: pointer;
+          display: flex;
+          flex-direction: row;
+          height: 50px;
+          justify-content: center;
+          text-decoration: none;
+          width: 100%;
+
+          .text_button {
+            color: #fff;
+            font-weight: 600;
+          }
+        }
+
+        .input_container {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .waiting_list {
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .page8_container {
+    flex-direction: row;
+
+    .page8_container_text {
+      width: 50vw;
+      width: 30vw;
+    }
+
+    .page8_text_container {
+      .card_container {
+        width: 30vw;
+
+        .email_container {
+          width: 30vw;
+        }
+      }
+    }
+  }
+}

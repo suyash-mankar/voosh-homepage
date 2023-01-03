@@ -1,4 +1,3 @@
-import "../styles/App.css";
 import { Page1, Page8 } from "../pages";
 import Navbar from "./Navbar";
 
