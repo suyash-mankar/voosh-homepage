@@ -7,6 +7,7 @@ import bcrypt from "bcryptjs";
 import "../assets/scss/pages/page8.scss";
 
 export default function Page8() {
+  // using useFormInput custom hook to take form inputs
   const name = useFormInput("");
   const email = useFormInput("");
   const companyName = useFormInput("");
