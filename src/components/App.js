@@ -1,5 +1,5 @@
 import { Page1, Page8 } from "../pages";
-import Navbar from "./Navbar";
+import { Navbar } from "./";
 
 function App() {
   return (

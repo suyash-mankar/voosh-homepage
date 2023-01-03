@@ -11,15 +11,18 @@ export default function Page1() {
           className="landing_bg_icon"
         />
       </div>
+
       <div className="page1_title_container_content">
         <div className="page1_title_container">
           <div className="title">
             Consolidate your restaurants' insights in one place. Unlock growth.
           </div>
+
           <div className="subtitle">
             Your one stop solution to view mission-critical data and insights
             from all your locations in one place.
           </div>
+
           <div className="button_arrow_container">
             <div className="button_container_style">
               <a href="#Waitinglist" className="button_container">
@@ -50,6 +53,7 @@ export default function Page1() {
             className="my_profile_icon"
           />
         </div>
+
         <div className="page1_outlet_container">
           <img
             src="https://voosh.in/static/media/page1_1.cb1dbedcdc321b25fb4e.webp"

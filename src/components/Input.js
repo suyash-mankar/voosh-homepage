@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../assets/scss/components/input.scss";
 
 export default function Input({ name, type, placeholder, label, value }) {

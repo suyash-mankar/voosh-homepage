@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
-import Input from "../components/Input";
+import React, { useEffect } from "react";
+import { Input } from "../components";
 import useFormInput from "../hooks";
 import { setItemInLocalStorage, getItemFromLocalStorage } from "../utils";
 import { toast } from "react-toastify";
+import bcrypt from "bcryptjs";
 import "../assets/scss/pages/page8.scss";
 
 export default function Page8() {
@@ -13,16 +14,20 @@ export default function Page8() {
   const password = useFormInput("");
 
   useEffect(() => {
+    // get the user from local storage
     const user = getItemFromLocalStorage("user");
+    // if user is present
     if (user) {
-      toast.success("user is Logged In");
+      toast.success("user is logged In");
     } else {
-      toast.error("user is NOT Logged In");
+      // if user is not present
+      toast.error("user is NOT logged In");
     }
   }, []);
 
   const handleClick = (e) => {
     e.preventDefault();
+    // check if any of the input field is blank
     if (
       name.value === "" ||
       email.value === "" ||
@@ -33,7 +38,19 @@ export default function Page8() {
       toast.error("please enter all fields");
       return;
     }
-    const userDetails = { name, email, companyName, designation, password };
+
+    // hash the password before saving it in local storage
+    var salt = bcrypt.genSaltSync(10);
+    var hashedPassword = bcrypt.hashSync(password.value, salt);
+    const userDetails = {
+      name,
+      email,
+      companyName,
+      designation,
+      hashedPassword,
+    };
+
+    // set the user details in local storage
     setItemInLocalStorage("user", userDetails);
     toast.success("user registered in local storage");
   };

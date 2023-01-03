@@ -9,6 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
     <App />
+    {/* for rendering notification */}
     <ToastContainer
       position="top-center"
       autoClose={3000}
