@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/scss/components/input.scss";
 
-export default function Input({ name, type, placeholder, label }) {
+export default function Input({ name, type, placeholder, label, value }) {
   return (
     <div className="input_container">
       <div className="input_label">
@@ -12,6 +12,8 @@ export default function Input({ name, type, placeholder, label }) {
         className="input_style"
         name={name}
         placeholder={placeholder}
+        {...value}
+        required
       />
     </div>
   );
